@@ -5,9 +5,10 @@ autoSwitchAppearance = false
 enableSearch = false
 enableCodeCopy = false
 
+defaultBackgroundImage = "images/background.jpg"
+
 [homepage]
   layout = "background"
-  homepageImage = "images/hero.jpg"
   showRecent = false
 
 [header]
