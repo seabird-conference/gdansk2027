@@ -16,6 +16,7 @@ enableCodeCopy = false
 [footer]
   showCopyright = true
   showThemeAttribution = false
+  showAppearanceSwitcher = false
 
 [article]
   showDate = false
