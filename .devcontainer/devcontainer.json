@@ -43,7 +43,5 @@
     }
   },
 
-  "postStartCommand": {
-    "hugo": "hugo server --bind 0.0.0.0 --port 1313 2>&1 | tee /tmp/hugo-server.log"
-  }
+  "postStartCommand": "hugo server --bind 0.0.0.0 --port 1313 2>&1 | tee /tmp/hugo-server.log"
 }
