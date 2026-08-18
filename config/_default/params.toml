@@ -1,14 +1,13 @@
 colorScheme = "ocean"
+customCSS = ["css/custom.css"]
 defaultAppearance = "light"
 autoSwitchAppearance = false
 
 enableSearch = false
 enableCodeCopy = false
 
-defaultBackgroundImage = "images/background.jpg"
-
 [homepage]
-  layout = "background"
+  layout = "custom"
   showRecent = false
 
 [header]

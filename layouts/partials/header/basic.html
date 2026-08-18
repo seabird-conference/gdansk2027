@@ -1,0 +1,24 @@
+<div class="main-menu flex items-center w-full gap-3 px-6 sm:px-14 md:px-24 lg:px-32 py-3" style="background-color: #1a3a5c;">
+  {{ $logo := resources.Get "images/header-logo.jpg" }}
+  {{ if $logo }}
+    <a href="{{ "" | relLangURL }}" class="flex-shrink-0">
+      <img
+        src="{{ $logo.RelPermalink }}"
+        height="48"
+        class="h-12 w-auto object-cover rounded nozoom"
+        alt="{{ .Site.Title }}">
+    </a>
+  {{ end }}
+  <a href="{{ "" | relLangURL }}" class="text-white text-xl font-semibold truncate min-w-0 shrink">
+    {{ .Site.Title | markdownify }}
+  </a>
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      {{ partial "header/components/desktop-menu.html" . }}
+    </div>
+    <div class="flex md:hidden">
+      {{ partial "header/components/mobile-menu.html" . }}
+    </div>
+  </div>
+</div>
+{{- partial "slideshow.html" . -}}

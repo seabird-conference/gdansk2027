@@ -1,0 +1,9 @@
+/* Header nav links — white text on dark blue background */
+header .main-menu a,
+header .main-menu span {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+header .main-menu a:hover,
+header .main-menu a:hover span {
+  color: #ffffff !important;
+}

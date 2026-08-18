@@ -1,0 +1,19 @@
+- image: images/slideshow/slide1.jpg
+  alt: A forest landscape
+  credit: Ales Krivec
+  creditUrl: https://unsplash.com/@aleskrivec
+
+- image: images/slideshow/slide2.jpg
+  alt: Mountain scenery
+  credit: Arto Marttinen
+  creditUrl: https://unsplash.com/@wandervisions
+
+- image: images/slideshow/slide3.jpg
+  alt: Coastal cliffs
+  credit: Luca Bravo
+  creditUrl: https://unsplash.com/@lucabravo
+
+- image: images/slideshow/slide4.jpg
+  alt: Open countryside
+  credit: Emmad Mazhari
+  creditUrl: https://unsplash.com/@emmadmazhari
