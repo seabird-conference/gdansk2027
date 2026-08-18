@@ -1,0 +1,8 @@
+baseURL = "https://seabird-conference.github.io/gdansk2027/"
+locale = "en"
+title = "Gdansk 2027"
+defaultContentLanguage = "en"
+
+[module]
+  [[module.imports]]
+    path = "github.com/nunocoracao/blowfish/v2"

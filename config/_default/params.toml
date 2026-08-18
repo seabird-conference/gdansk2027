@@ -1,0 +1,24 @@
+colorScheme = "ocean"
+defaultAppearance = "light"
+autoSwitchAppearance = false
+
+enableSearch = false
+enableCodeCopy = false
+
+[homepage]
+  layout = "background"
+  homepageImage = "images/hero.jpg"
+  showRecent = false
+
+[header]
+  layout = "basic"
+
+[footer]
+  showCopyright = true
+  showThemeAttribution = false
+
+[article]
+  showDate = false
+  showAuthor = false
+  showReadingTime = false
+  showTableOfContents = false

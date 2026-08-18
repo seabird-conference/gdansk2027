@@ -1,7 +1,0 @@
-baseURL = "https://seabird-conference.github.io/gdansk2027/"
-languageCode = "en-us"
-title = "Your Conference"
-
-[module]
-  [[module.imports]]
-    path = "github.com/GDGToulouse/devfest-theme-hugo"

@@ -1,0 +1,29 @@
+[[main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 10
+
+[[main]]
+  name = "Programme"
+  pageRef = "programme"
+  weight = 20
+
+[[main]]
+  name = "Travel & Accommodation"
+  pageRef = "travel"
+  weight = 30
+
+[[main]]
+  name = "Committee"
+  pageRef = "committee"
+  weight = 40
+
+[[main]]
+  name = "Venue"
+  pageRef = "venue"
+  weight = 50
+
+[[main]]
+  name = "Useful Information"
+  pageRef = "useful-information"
+  weight = 60
