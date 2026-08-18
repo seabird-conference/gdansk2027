@@ -23,3 +23,4 @@ defaultBackgroundImage = "images/background.jpg"
   showAuthor = false
   showReadingTime = false
   showTableOfContents = false
+  showWordCount = false
