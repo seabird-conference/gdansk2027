@@ -1,4 +1,5 @@
-baseURL = "https://seabird-conference.github.io/gdansk2027/"
+baseURL = "/"
+relativeURLs = true
 locale = "en"
 title = "Gdansk 2027"
 defaultContentLanguage = "en"
