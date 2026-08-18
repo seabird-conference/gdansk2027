@@ -1,5 +1,6 @@
 ---
 title: "Programme"
+weight: 20
 ---
 
-The programme will be published closer to the event. Check back soon.
+Hello this is the programme
