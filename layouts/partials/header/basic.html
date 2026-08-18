@@ -1,4 +1,4 @@
-<div class="main-menu flex items-center w-full gap-3 px-6 sm:px-14 md:px-24 lg:px-32 py-3" style="background-color: #1a3a5c;">
+<div class="main-menu flex items-center w-full gap-3 px-6 sm:px-14 md:px-24 lg:px-32 py-3" style="background-color: rgba(26, 58, 92, 0.85); backdrop-filter: blur(6px);">
   {{ $logo := resources.Get "images/header-logo.jpg" }}
   {{ if $logo }}
     <a href="{{ "" | relLangURL }}" class="flex-shrink-0">
@@ -21,4 +21,3 @@
     </div>
   </div>
 </div>
-{{- partial "slideshow.html" . -}}
