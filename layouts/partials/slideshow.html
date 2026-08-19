@@ -1,7 +1,5 @@
 {{ $slides := hugo.Data.slideshow }}
 {{ $count := len $slides }}
-{{ $duration := 300 }}
-{{ $total := mul $count $duration }}
 
 <style>
 .slideshow {
@@ -15,7 +13,12 @@
   position: absolute;
   inset: 0;
   opacity: 0;
-  animation: slidefade {{ $total }}s infinite;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.slideshow-slide.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 .slideshow-slide img {
   width: 100%;
@@ -29,40 +32,89 @@
   font-size: 0.7rem;
   color: rgba(255,255,255,0.75);
 }
-{{ range $i, $slide := $slides }}
-.slideshow-slide:nth-child({{ add $i 1 }}) {
-  animation-delay: {{ mul $i $duration }}s;
+.slideshow-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border: none;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 2;
 }
-{{ end }}
-@keyframes slidefade {
-  0%                                    { opacity: 0; }
-  5%                                    { opacity: 1; }
-  {{ div 100 $count | int }}%          { opacity: 1; }
-  {{ add (div 100 $count | int) 5 }}%  { opacity: 0; }
-  100%                                  { opacity: 0; }
+.slideshow-arrow:hover {
+  background: rgba(0,0,0,0.65);
+}
+.slideshow-arrow.prev { left: 0.75rem; }
+.slideshow-arrow.next { right: 0.75rem; }
+.slideshow-dots {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.75rem;
+  display: flex;
+  gap: 0.4rem;
+  z-index: 2;
+}
+.slideshow-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.slideshow-dot.active {
+  background: #fff;
 }
 </style>
 
-<div class="slideshow">
-  {{ range $slides }}
+<div class="slideshow" id="seabird-slideshow">
+  {{ range $i, $slide := $slides }}
   {{ $img := resources.Get .image }}
   {{ if $img }}
-  <div class="slideshow-slide">
-    <img src="{{ $img.RelPermalink }}" alt="{{ .alt }}" loading="eager">
+  <div class="slideshow-slide{{ if eq $i 0 }} active{{ end }}">
+    <img src="{{ $img.RelPermalink }}" alt="{{ .alt }}" loading="{{ if eq $i 0 }}eager{{ else }}lazy{{ end }}">
     <div class="slideshow-credit">
       © {{ .credit }}
     </div>
   </div>
   {{ end }}
   {{ end }}
+
+  <button class="slideshow-arrow prev" aria-label="Previous photo">&#10094;</button>
+  <button class="slideshow-arrow next" aria-label="Next photo">&#10095;</button>
+
+  <div class="slideshow-dots">
+    {{ range $i, $slide := $slides }}
+    <button class="slideshow-dot{{ if eq $i 0 }} active{{ end }}" aria-label="Go to photo {{ add $i 1 }}"></button>
+    {{ end }}
+  </div>
 </div>
+
 <script>
 (function () {
-  var total = {{ $total }};
-  var offset = Math.random() * total;
-  document.querySelectorAll('.slideshow-slide').forEach(function (el) {
-    var current = parseFloat(getComputedStyle(el).animationDelay) || 0;
-    el.style.animationDelay = (current - offset) + 's';
+  var root = document.getElementById('seabird-slideshow');
+  var slides = root.querySelectorAll('.slideshow-slide');
+  var dots = root.querySelectorAll('.slideshow-dot');
+  var current = 0;
+
+  function show(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  root.querySelector('.prev').addEventListener('click', function () { show(current - 1); });
+  root.querySelector('.next').addEventListener('click', function () { show(current + 1); });
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () { show(i); });
   });
 })();
 </script>
