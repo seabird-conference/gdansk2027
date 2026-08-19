@@ -19,11 +19,8 @@
   weight = 40
 
 [[main]]
-  name = "Venue"
-  pageRef = "venue"
+  name = "Intructions"
+  pageRef = "intructions"
   weight = 50
 
-[[main]]
-  name = "Useful Information"
-  pageRef = "useful-information"
-  weight = 60
+
