@@ -1,16 +1,21 @@
-<div class="main-menu flex items-center w-full gap-3 px-6 sm:px-14 md:px-24 lg:px-32 py-3" style="background-color: rgba(26, 58, 92, 0.85); backdrop-filter: blur(6px);">
-  {{ $logo := resources.Get "images/header-logo.jpg" }}
+<div class="main-menu flex items-center w-full gap-3 px-6 sm:px-14 md:px-24 lg:px-32 py-4" style="background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(6px);">
+  {{ $logo := resources.Get "images/header-logo.png" }}
   {{ if $logo }}
     <a href="{{ "" | relLangURL }}" class="flex-shrink-0">
       <img
         src="{{ $logo.RelPermalink }}"
-        height="48"
-        class="h-12 w-auto object-cover rounded nozoom"
+        style="height: 90px; width: auto;"
+        class="object-cover rounded nozoom"
         alt="{{ .Site.Title }}">
     </a>
   {{ end }}
-  <a href="{{ "" | relLangURL }}" class="text-white text-xl font-semibold truncate min-w-0 shrink">
-    {{ .Site.Title | markdownify }}
+  <a href="{{ "" | relLangURL }}" class="flex flex-col min-w-0 shrink">
+    <span class="text-black text-xl font-semibold truncate">
+      {{ .Site.Title | markdownify }}
+    </span>
+    <span class="text-sm text-gray-600">
+      6–10 September, Gdańsk
+    </span>
   </a>
   <div class="flex items-center ms-auto">
     <div class="hidden md:flex">

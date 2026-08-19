@@ -12,7 +12,6 @@ enableCodeCopy = false
 
 [header]
   layout = "basic"
-    logo = "images/header-logo.png"
 
 [footer]
   showCopyright = true
@@ -25,3 +24,4 @@ enableCodeCopy = false
   showReadingTime = false
   showTableOfContents = false
   showWordCount = false
+  showPagination = false

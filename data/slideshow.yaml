@@ -1,19 +1,39 @@
-- image: images/slideshow/slide1.jpg
-  alt: A forest landscape
-  credit: Ales Krivec
-  creditUrl: https://unsplash.com/@aleskrivec
+- image: images/slideshow/african-penguin-adults---alex-bond.jpg
+  alt: African Penguin Adults
+  credit: Alex Bond
 
-- image: images/slideshow/slide2.jpg
-  alt: Mountain scenery
-  credit: Arto Marttinen
-  creditUrl: https://unsplash.com/@wandervisions
+- image: images/slideshow/atlantic-puffin-danni-thompson-(7).jpg
+  alt: Atlantic Puffin
+  credit: Danni Thompson
 
-- image: images/slideshow/slide3.jpg
-  alt: Coastal cliffs
-  credit: Luca Bravo
-  creditUrl: https://unsplash.com/@lucabravo
+- image: images/slideshow/brown-noddy-2-hayley-mclennan.jpeg
+  alt: Brown Noddy
+  credit: Hayley McLennan
 
-- image: images/slideshow/slide4.jpg
-  alt: Open countryside
-  credit: Emmad Mazhari
-  creditUrl: https://unsplash.com/@emmadmazhari
+- image: images/slideshow/common-guillemot-danni-thompson-(3).jpg
+  alt: Common Guillemot
+  credit: Danni Thompson
+
+- image: images/slideshow/common-gull-danni-thompson-(1).jpg
+  alt: Common Gull
+  credit: Danni Thompson
+
+- image: images/slideshow/fulmer-jacqui-glencross.jpg
+  alt: Fulmar
+  credit: Jacqui Glencross
+
+- image: images/slideshow/northern-gannet-danni-thompson-(7).jpg
+  alt: Northern Gannet
+  credit: Danni Thompson
+
+- image: images/slideshow/penguin-and-terns-jacqui-glencross.jpg
+  alt: Penguin and Terns
+  credit: Jacqui Glencross
+
+- image: images/slideshow/razorbills-jacqui-glencross.jpg
+  alt: Razorbills
+  credit: Jacqui Glencross
+
+- image: images/slideshow/white-tern-hayley-mclennan.jpeg
+  alt: White Tern
+  credit: Hayley McLennan

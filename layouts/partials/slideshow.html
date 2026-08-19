@@ -29,10 +29,6 @@
   font-size: 0.7rem;
   color: rgba(255,255,255,0.75);
 }
-.slideshow-credit a {
-  color: rgba(255,255,255,0.75);
-  text-decoration: underline;
-}
 {{ range $i, $slide := $slides }}
 .slideshow-slide:nth-child({{ add $i 1 }}) {
   animation-delay: {{ mul $i $duration }}s;
@@ -54,7 +50,7 @@
   <div class="slideshow-slide">
     <img src="{{ $img.RelPermalink }}" alt="{{ .alt }}" loading="eager">
     <div class="slideshow-credit">
-      Photo: <a href="{{ .creditUrl }}" target="_blank" rel="noopener">{{ .credit }}</a>
+      © {{ .credit }}
     </div>
   </div>
   {{ end }}
