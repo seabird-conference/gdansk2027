@@ -12,6 +12,7 @@ enableCodeCopy = false
 
 [header]
   layout = "basic"
+    logo = "images/header-logo.png"
 
 [footer]
   showCopyright = true

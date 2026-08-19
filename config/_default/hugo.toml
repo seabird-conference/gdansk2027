@@ -1,7 +1,7 @@
 baseURL = "/"
 relativeURLs = true
 locale = "en"
-title = "Gdansk 2027"
+title = "Seabird Conference 2027"
 defaultContentLanguage = "en"
 
 [module]
