@@ -9,8 +9,8 @@
         alt="{{ .Site.Title }}">
     </a>
   {{ end }}
-  <a href="{{ "" | relLangURL }}" class="flex flex-col min-w-0 shrink">
-    <span class="text-black text-xl font-semibold truncate">
+  <a href="{{ "" | relLangURL }}" class="flex flex-col shrink-0">
+    <span class="text-black text-xl font-semibold whitespace-nowrap">
       {{ .Site.Title | markdownify }}
     </span>
     <span class="text-sm text-gray-600">
