@@ -1,3 +1,21 @@
+/*
+ * backdrop-filter on .main-menu creates a new containing block for
+ * position:fixed children (the mobile menu overlay). Move the blur to a
+ * pseudo-element so fixed descendants size relative to the viewport again.
+ */
+.main-menu {
+  backdrop-filter: none !important;
+  position: relative;
+}
+.main-menu::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* Header nav links — white text on dark blue background */
 header .main-menu a,
 header .main-menu span {
