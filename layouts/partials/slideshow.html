@@ -77,8 +77,15 @@
   {{ range $i, $slide := $slides }}
   {{ $img := resources.Get .image }}
   {{ if $img }}
+  {{ $base := strings.TrimSuffix (path.Ext .image) .image }}
+  {{ $avif := resources.Get (printf "%s.avif" $base) }}
+  {{ $webp := resources.Get (printf "%s.webp" $base) }}
   <div class="slideshow-slide{{ if eq $i 0 }} active{{ end }}">
-    <img src="{{ $img.RelPermalink }}" alt="{{ .alt }}" loading="{{ if eq $i 0 }}eager{{ else }}lazy{{ end }}">
+    <picture>
+      {{ if $avif }}<source srcset="{{ $avif.RelPermalink }}" type="image/avif">{{ end }}
+      {{ if $webp }}<source srcset="{{ $webp.RelPermalink }}" type="image/webp">{{ end }}
+      <img src="{{ $img.RelPermalink }}" alt="{{ .alt }}" loading="{{ if eq $i 0 }}eager{{ else }}lazy{{ end }}">
+    </picture>
     <div class="slideshow-credit">
       © {{ .credit }}
     </div>
